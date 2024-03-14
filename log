@@ -31,3 +31,12 @@ exercises.c:23:10: error: ‘numero_mayor’ may be used uninitialized in this f
 cc1: all warnings being treated as errors
 Compilation failed
 823e527
+Thu 14 Mar 2024 05:46:13 PM UTC: 
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:23:10: error: ‘numero_mayor’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   23 |   return numero_mayor;
+      |          ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+98b391d
