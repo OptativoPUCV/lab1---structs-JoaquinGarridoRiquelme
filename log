@@ -230,3 +230,15 @@ exercises.c:104:5: error: statement with no effect [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 2c40dfe
+Thu 14 Mar 2024 07:09:16 PM UTC: 
+ exercises.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+In file included from test.c:1:
+exercises.c:104:3: error: expected identifier or ‘(’ before ‘while’
+  104 |   while(j < size2)
+      |   ^~~~~
+exercises.c:110:1: error: expected identifier or ‘(’ before ‘}’ token
+  110 | }
+      | ^
+Compilation failed
+98e84c9
