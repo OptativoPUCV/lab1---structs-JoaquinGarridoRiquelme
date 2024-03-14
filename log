@@ -308,3 +308,62 @@ Thu 14 Mar 2024 08:51:40 PM UTC:
  tests:  0|2
 total_score: 50/70
 4699187
+Thu 14 Mar 2024 08:56:33 PM UTC: 
+ exercises.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:159:16: error: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Werror=int-conversion]
+  159 |   strcpy(libro -> anioPublicacion, anioPublicacion);
+      |          ~~~~~~^~~~~~~~~~~~~~~~~~
+      |                |
+      |                int
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘char * restrict’ but argument is of type ‘int’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:159:36: error: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Werror=int-conversion]
+  159 |   strcpy(libro -> anioPublicacion, anioPublicacion);
+      |                                    ^~~~~~~~~~~~~~~
+      |                                    |
+      |                                    int
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘const char * restrict’ but argument is of type ‘int’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:161:23: error: passing argument 1 of ‘strcpy’ makes pointer from integer without a cast [-Werror=int-conversion]
+  161 |   strcpy(libro ->autor.anioNacimiento, anioNacimiento);
+      |          ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+      |                       |
+      |                       int
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘char * restrict’ but argument is of type ‘int’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+In file included from test.c:1:
+exercises.c:161:40: error: passing argument 2 of ‘strcpy’ makes pointer from integer without a cast [-Werror=int-conversion]
+  161 |   strcpy(libro ->autor.anioNacimiento, anioNacimiento);
+      |                                        ^~~~~~~~~~~~~~
+      |                                        |
+      |                                        int
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/features.h:490,
+                 from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/ctype.h:25,
+                 from exercises.c:1,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/bits/string_fortified.h:77:1: note: expected ‘const char * restrict’ but argument is of type ‘int’
+   77 | __NTH (strcpy (char *__restrict __dest, const char *__restrict __src))
+      | ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9412468
