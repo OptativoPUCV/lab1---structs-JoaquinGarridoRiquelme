@@ -1,1 +1,22 @@
 
+Thu 14 Mar 2024 05:45:02 PM UTC: 
+ exercises.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c:1:3: error: stray ‘#’ in program
+    1 | a #include <ctype.h>
+      |   ^
+exercises.c:1:1: error: unknown type name ‘a’
+    1 | a #include <ctype.h>
+      | ^
+exercises.c:1:12: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+    1 | a #include <ctype.h>
+      |            ^
+In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:395,
+                 from exercises.c:4,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/sys/types.h:33:9: error: unknown type name ‘__u_char’
+   33 | typedef __u_char u_char;
+      |         ^~~~~~~~
+Compilation failed
+52a7cc0
