@@ -259,3 +259,14 @@ exercises.c:137:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 52335b5
+Thu 14 Mar 2024 08:18:10 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:137:1: error: control reaches end of non-void function [-Werror=return-type]
+  137 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+da9f9f4
