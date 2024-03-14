@@ -66,3 +66,13 @@ exercises.c:61:10: error: function returns address of local variable [-Werror=re
 cc1: all warnings being treated as errors
 Compilation failed
 ce58344
+Thu 14 Mar 2024 06:26:28 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:57:22: error: array subscript is not an integer
+   57 |         nuevo_arreglo[newSize] = arr[i];
+      |                      ^
+Compilation failed
+43bea81
