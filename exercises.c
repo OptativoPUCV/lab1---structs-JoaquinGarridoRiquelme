@@ -46,7 +46,20 @@ los números pares del arreglo original.
 newsize apunta a una dirección válida que no ha sido inicializada con nigún valor específico. 
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+int *filterEvenNumbers(int arr[], int size, int *newSize) 
+{
+  *newSize = 0;
+  int nuevo_arreglo[size];
+  for(int i = 0; i < size; i++)
+    {
+      if(arr[i] % 2 == 0)
+      {
+        nuevo_arreglo[newSize] = arr[i];
+        *newSize += 1; 
+      }
+    }
+  return nuevo_arreglo; 
+}
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados

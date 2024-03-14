@@ -52,3 +52,17 @@ Thu 14 Mar 2024 06:13:39 PM UTC:
  tests:  0|5
 total_score: 20/70
 c6ac06b
+Thu 14 Mar 2024 06:23:30 PM UTC: 
+ exercises.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:57:22: error: array subscript is not an integer
+   57 |         nuevo_arreglo[newSize] = arr[i];
+      |                      ^
+exercises.c:61:10: error: function returns address of local variable [-Werror=return-local-addr]
+   61 |   return nuevo_arreglo;
+      |          ^~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ce58344
