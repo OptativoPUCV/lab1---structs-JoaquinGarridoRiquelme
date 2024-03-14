@@ -174,3 +174,17 @@ test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 46ca04a
+Thu 14 Mar 2024 07:02:56 PM UTC: 
+ exercises.c | 43 +++++++++++++++++--------------------------
+ 1 file changed, 17 insertions(+), 26 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:98:9: error: statement with no effect [-Werror=unused-value]
+   98 |         for(i; i < size1; i++, pos++)
+      |         ^~~
+exercises.c:103:9: error: statement with no effect [-Werror=unused-value]
+  103 |         for(j; j < size2; j++, pos++)
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+230d657
