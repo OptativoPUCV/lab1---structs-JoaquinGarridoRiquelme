@@ -20,3 +20,14 @@ In file included from /nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163
       |         ^~~~~~~~
 Compilation failed
 52a7cc0
+Thu 14 Mar 2024 05:45:14 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:23:10: error: ‘numero_mayor’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   23 |   return numero_mayor;
+      |          ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+823e527
