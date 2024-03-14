@@ -147,3 +147,30 @@ test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 f670b05
+Thu 14 Mar 2024 06:45:06 PM UTC: 
+ exercises.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+test.c: In function ‘mergeSortedArrays’:
+test.c:382:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+test.c:7:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+    7 | char msg[300];
+      |      ^~~
+In file included from test.c:1:
+exercises.c:73:7: error: unused variable ‘result_size’ [-Werror=unused-variable]
+   73 |   int result_size = size1 + size2;
+      |       ^~~~~~~~~~~
+At top level:
+test.c:382:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  382 | int main(int argc, char *argv[]) {
+      |     ^~~~
+test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-function]
+   47 | void readIntArray(int arr[], int *size) {
+      |      ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+46ca04a
