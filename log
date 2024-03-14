@@ -216,3 +216,17 @@ exercises.c:103:9: error: statement with no effect [-Werror=unused-value]
 cc1: all warnings being treated as errors
 Compilation failed
 cfa7aab
+Thu 14 Mar 2024 07:07:10 PM UTC: 
+ exercises.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:99:5: error: statement with no effect [-Werror=unused-value]
+   99 |     for(i; i < size1; i++, pos++)
+      |     ^~~
+exercises.c:104:5: error: statement with no effect [-Werror=unused-value]
+  104 |     for(j; j < size2; j++, pos++)
+      |     ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+2c40dfe
