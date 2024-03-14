@@ -40,3 +40,9 @@ exercises.c:23:10: error: ‘numero_mayor’ may be used uninitialized in this f
 cc1: all warnings being treated as errors
 Compilation failed
 98b391d
+Thu 14 Mar 2024 05:47:52 PM UTC: 
+ exercises.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+ tests:  0|6
+total_score: 10/70
+7c5d665

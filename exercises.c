@@ -11,14 +11,11 @@ y su tamaño, y devuelva el valor más grande del arreglo.
 */
 int findMax(int arr[], int size) 
 {
-  int numero_mayor;
+  int numero_mayor = arr[0];
   for(int i = 0; i < size; i++)
     {
-      if(i == 0)
-        numero_mayor = arr[i];
-      else
-        if(arr[i] > numero_mayor)
-            numero_mayor = arr[i];
+      if(arr[i] > numero_mayor)
+          numero_mayor = arr[i];
     }
   return numero_mayor; 
 }
