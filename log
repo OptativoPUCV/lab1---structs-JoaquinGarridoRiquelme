@@ -410,3 +410,9 @@ exercises.c:202:9: error: unused variable ‘nodo_aux_1’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 a6c95db
+Sat 16 Mar 2024 12:48:16 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|1
+total_score: 60/70
+54871b5
