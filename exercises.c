@@ -30,11 +30,13 @@ invierta el orden de sus elementos.
 */
 void reverseArray(int arr[], int size) 
 {
+  //Creamos un arreglo auxiliar el cual es el original invertido
   int arr_aux[size];
   for(size_t i = 0; i < size; i++)
     {
       arr_aux[i] = arr[size - i - 1];
     }
+  //Copiamos nuestro arreglo invertido en el original para su modificacion
   for(size_t i = 0; i < size; i++)
     {
       arr[i] = arr_aux[i];
@@ -51,12 +53,17 @@ newsize apunta a una dirección válida que no ha sido inicializada con nigún v
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) 
 {
+  //Iniciamos el valor de nuestra nueva talla en 0
   *newSize = 0;
+  /*Reservamos memoria para el nuevo arreglo, teniendo en cuenta la talla del arreglo     
+  original*/
   int *nuevo_arreglo = (int*) malloc (sizeof(int) * size);
   for(int i = 0; i < size; i++)
     {
+      //Buscamos los numeros pares
       if(arr[i] % 2 == 0)
       {
+        //Agregamos el numero y aumentamos la talla del nuevo arreglo
         nuevo_arreglo[*newSize] = arr[i];
         (*newSize) += 1; 
       }
@@ -73,8 +80,10 @@ arreglos en un tercer arreglo también ordenado de menor a mayor.
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]) 
 {
   int i = 0, j = 0, pos = 0;
+  //Iniciamos un bucle hasta que uno o ambos arreglos se hayan recorrido
   while(i < size1 && j < size2)
     {
+      /*Comparamos cada elemento de cada arreglo para asi poder ordenar*/
       if(arr1[i] < arr2[j])
       {
         result[pos] = arr1[i];
@@ -87,6 +96,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]
         j++;
         pos++;
       }
+      //En caso de ser iguales, ambos se agregan
       else
       {
         result[pos] = arr1[i];
@@ -96,6 +106,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,int result[]
         j++;
       } 
     }
+  //Verificamos si quedan elementos pendientes por agregar
   while(i < size1)
     {
       result[pos] = arr1[i];
@@ -118,9 +129,11 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) 
 {
+  //Usaremos banderas para condicionar el retorno de la funcion
   bool ascendente = true, descendente = true;
   for(int i = 0; i < size - 1; i++)
     {
+      //Vemos las condiciones de cada caso y vamos descartando posibilidades
       if(arr[i] > arr[i + 1])
       {
         ascendente = false;
@@ -130,6 +143,7 @@ int checkSorted(int arr[], int size)
         descendente = false;
       }
     }
+  //Retornamos los valores requeridos segun las condiciones del caso
   if(ascendente) return 1;
   if(descendente) return -1;
   return 0;
@@ -157,6 +171,8 @@ typedef struct {
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) 
 {
+  /*Simplemente pegamos los elementos en las casillas de la estructura, la cual
+  manejamos a traves del puntero a libro*/
   strcpy(libro -> titulo, titulo);
   (libro -> anioPublicacion)  = anioPublicacion;
   strcpy(libro ->autor.nombre, nombreAutor);
@@ -182,5 +198,18 @@ typedef struct nodo {
 
 Nodo *crearListaEnlazada(int arr[], int size) 
 { 
+  Nodo *head = NULL;
+  Nodo *nodo_aux_1;
+  Nodo *nodo_aux_2;
+
+  for(int i = 0; i < size; i++)
+    {
+      //En caso de ser la primera iteracion, configuramos el primer nodo
+      if(head == NULL)
+      {
+        
+      }
+    }
+    
   return NULL;
 }
