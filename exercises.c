@@ -205,7 +205,7 @@ Nodo *crearListaEnlazada(int arr[], int size)
   for(int i = 0; i < size; i++)
     {
       //En caso de ser la primera iteracion, configuramos el primer nodo
-      if(head == NULL)
+      if(i == 0)
       {
         nodo_aux_1 = (Nodo*) malloc(sizeof(Nodo));
         nodo_aux_1 -> numero = arr[i];
