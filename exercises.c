@@ -198,30 +198,38 @@ typedef struct nodo {
 
 Nodo *crearListaEnlazada(int arr[], int size) 
 { 
-  Nodo *head = NULL;
-  Nodo *nodo_aux_1;
-  Nodo *nodo_aux_2;
-
-  for(int i = 0; i < size; i++)
+  if(size <= 0)
+  {
+    return NULL;
+  }
+  Nodo *head = (Nodo*) malloc (sizeof(Nodo));
+  if(head == NULL)
+  {
+    return NULL;
+  }
+  head->numero = arr[0];
+  head->siguiente = NULL;
+  Nodo *aux = head;
+  Nodo *nodo_aux = (Nodo *)malloc(sizeof(Nodo));
+for(int i = 1 ; i < size ; i++)
     {
-      //En caso de ser la primera iteracion, configuramos el primer nodo
-      if(i == 0)
-      {
-        nodo_aux_1 = (Nodo*) malloc(sizeof(Nodo));
-        nodo_aux_1 -> numero = arr[i];
-        nodo_aux_1 -> siguiente = NULL;
-        head = nodo_aux_1;
-      }
+      Nodo *nodo_nuevo = (Nodo *)malloc(sizeof(Nodo));
+      if(nodo_nuevo == NULL)
+        {
+          Nodo *actualizado = head;
+          while(actualizado != NULL)
+            {
+              Nodo *temp = actualizado;
+              actualizado = actualizado->siguiente;
+              free(temp);
+            }
+          return NULL;
+        }
 
-      //Configuramos el segundo nodo
-      nodo_aux_2 = (Nodo*) malloc (sizeof(Nodo));
-      nodo_aux_2 -> numero = arr[i];
-      nodo_aux_2 -> siguiente = NULL;
-
-      //Enlace / intercambio de los nodos
-      nodo_aux_1 -> siguiente = nodo_aux_2;
-      nodo_aux_1 = nodo_aux_2;
+      nodo_nuevo->numero = arr[i];
+      nodo_nuevo->siguiente = NULL;
+      temp->siguiente = nodo_nuevo;
+      temp = nodo_nuevo;
     }
-    
   return head;
 }

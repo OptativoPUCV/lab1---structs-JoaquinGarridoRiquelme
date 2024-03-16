@@ -428,3 +428,21 @@ Sat 16 Mar 2024 12:58:10 AM UTC:
  tests:  0|1
 total_score: 60/70
 5073002
+Sat 16 Mar 2024 01:59:36 AM UTC: 
+ exercises.c | 48 ++++++++++++++++++++++++++++--------------------
+ 1 file changed, 28 insertions(+), 20 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:231:7: error: ‘temp’ undeclared (first use in this function)
+  231 |       temp->siguiente = nodo_nuevo;
+      |       ^~~~
+exercises.c:231:7: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:213:9: error: unused variable ‘nodo_aux’ [-Werror=unused-variable]
+  213 |   Nodo *nodo_aux = (Nodo *)malloc(sizeof(Nodo));
+      |         ^~~~~~~~
+exercises.c:212:9: error: unused variable ‘aux’ [-Werror=unused-variable]
+  212 |   Nodo *aux = head;
+      |         ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+27d9721
