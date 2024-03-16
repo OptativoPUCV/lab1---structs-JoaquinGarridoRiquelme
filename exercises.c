@@ -199,17 +199,29 @@ typedef struct nodo {
 Nodo *crearListaEnlazada(int arr[], int size) 
 { 
   Nodo *head = NULL;
-  //Nodo *nodo_aux_1;
-  //Nodo *nodo_aux_2;
+  Nodo *nodo_aux_1;
+  Nodo *nodo_aux_2;
 
   for(int i = 0; i < size; i++)
     {
       //En caso de ser la primera iteracion, configuramos el primer nodo
       if(head == NULL)
       {
-        
+        nodo_aux_1 = (Nodo*) malloc(sizeof(Nodo));
+        nodo_aux_1 -> numero = arr[i];
+        nodo_aux_1 -> siguiente = NULL;
+        head = nodo_aux_1;
       }
+
+      //Configuramos el segundo nodo
+      nodo_aux_2 = (Nodo*) malloc (sizeof(Nodo));
+      nodo_aux_2 -> numero = arr[i];
+      nodo_aux_2 -> siguiente = NULL;
+
+      //Enlace / intercambio de los nodos
+      nodo_aux_1 -> siguiente = nodo_aux_2;
+      nodo_aux_1 = nodo_aux_2;
     }
     
-  return NULL;
+  return head;
 }
