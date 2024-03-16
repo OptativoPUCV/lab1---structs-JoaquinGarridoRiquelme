@@ -207,8 +207,8 @@ Nodo *crearListaEnlazada(int arr[], int size)
     {
       return NULL;
     }
-  head->numero = arr[0];
-  head->siguiente = NULL;
+  head -> numero = arr[0];
+  head -> siguiente = NULL;
   Nodo *temp = head;
   for(int i = 1 ; i < size ; i++)
     {
@@ -218,9 +218,9 @@ Nodo *crearListaEnlazada(int arr[], int size)
           Nodo *actualizado = head;
           while(actualizado != NULL)
             {
-              Nodo *temp = actualizado;
+              Nodo *aux = actualizado;
               actualizado = actualizado->siguiente;
-              free(temp);
+              free(aux);
             }
           return NULL;
         }
